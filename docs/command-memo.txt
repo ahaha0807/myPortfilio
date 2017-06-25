@@ -1,0 +1,8 @@
+開発用起動
+bundle exec unicorn -c unicorn.rb
+デーモン起動
+bundle exec unicorn -c unicorn.rb  -D
+再起動
+kill -HUP `cat /tmp/pids/unicorn.pid`
+停止
+kill -QUIT `cat ./tmp/pids/unicorn.pid`
