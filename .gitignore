@@ -1,3 +1,5 @@
 src/webapp/node_modules
 log
 tmp
+
+public/
