@@ -58,8 +58,8 @@ gulp.task('css-minify', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./js/*.js', './index.html'], ['build']);
-  gulp.watch(['./sass/*.scss', './index.html'], ['sass']);
+  gulp.watch(['./js/*.js', './index.html'], ['build', 'sass']);
+  gulp.watch(['./sass/*.scss', './index.html'], ['build', 'sass']);
 });
 
 gulp.task('default', ['clean', 'build', 'sass', 'watch']);
