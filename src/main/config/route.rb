@@ -1,6 +1,6 @@
 class Route < Sinatra::Base
     get '/' do
-        File.read(File.join('src/webapp/', 'index.html'))
+        File.read(File.join('public', 'index.html'))
     end
 end
 
