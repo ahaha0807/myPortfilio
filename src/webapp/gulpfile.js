@@ -14,7 +14,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', function () {
-  gulp.src('./index.html')
+  gulp.src('./html/index.html')
   .pipe(gulp.dest('../../public/'))
 
   return gulp.src('./js/*.js')
@@ -58,8 +58,8 @@ gulp.task('css-minify', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./js/*.js', './index.html'], ['build', 'sass']);
-  gulp.watch(['./sass/*.scss', './index.html'], ['build', 'sass']);
+  gulp.watch(['./js/*.js', './html/index.html'], ['build', 'sass']);
+  gulp.watch(['./sass/*.scss', './html/index.html'], ['build', 'sass']);
 });
 
 gulp.task('default', ['clean', 'build', 'sass', 'watch']);
